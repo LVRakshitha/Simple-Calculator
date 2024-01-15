@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+
+<style>
+.container{
+  height: 100vh;
+  width: 100%;
+  
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+.calsi{
+background-color: cornflowerblue;
+padding: 20px;
+border-radius: 10px;
+}
+.calsi form input{
+    height: 40px;
+    width: 60px;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+#txt{
+    background-color: white;
+    width: 390px;
+    height: 60px;
+}
+form .text{
+    display: flex;
+    justify-content: flex-end;
+}
+form input.enter {
+    width: 150px ;
+}
+input[type="button"]{
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px black;
+}
+#col{
+    background-color: rgb(229, 141, 48);
+}
+#col:hover{
+    background-color:  rgb(195, 108, 16);
+}
+#txt:hover{
+    background-color:rgb(197, 195, 195);
+}
+input[type="button"]:hover{
+    background-color: rgb(65, 123, 177);
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="calsi">
+            
+        <form>
+            <h1>SIMPLE CALCULATOR</h1>
+          
+        <div class="text">
+            
+            <input type="text" id="txt" name="txt">
+        </div>
+        <div class="l1">
+            <input type="button" value="(" onclick="txt.value +='('">
+            <input type="button" value=")" onclick="txt.value+=')'">
+            <input type="button" value="ans" id="col" onclick="txt.value=txt.value=eval(txt.value)">
+            <input type="button" value="del" id="col" onclick="txt.value=txt.value.toString().slice(0,-1)">
+            <input type="button" value="clear" id="col" onclick="txt.value=''">
+        </div>
+        <div class="l2">
+            <input type="button" value="7" onclick="txt.value+='7'">
+            <input type="button" value="8" onclick="txt.value+='8'">
+            <input type="button" value="9" onclick="txt.value+='9'">
+            <input type="button" value="%" onclick="txt.value+='%'">
+            <input type="button" value="x^2" onclick="txt.value=txt.value*txt.value">
+        </div>
+        <div class="l3">
+            <input type="button" value="4" onclick="txt.value+='4'">
+            <input type="button" value="5" onclick="txt.value+='5'">
+            <input type="button" value="6" onclick="txt.value+='6'">
+            <input type="button" value="x" onclick="txt.value+='*'">
+            <input type="button" value="/" onclick="txt.value+='/'">
+        </div>
+        <div class="l4">
+            <input type="button" value="1" onclick="txt.value+='1'">
+            <input type="button" value="2" onclick="txt.value+='2'">
+            <input type="button" value="3" onclick="txt.value+='3'">
+            <input type="button" value="+" onclick="txt.value+='+'">
+            <input type="button" value="-" onclick="txt.value+='-'">
+        </div>
+        <div class="l5">
+            <input type="button" value="00"  onclick="txt.value+='00'">
+            <input type="button" value="0" onclick="txt.value+='0'">
+            <input type="button" value="." onclick="txt.value+='.'">
+            <input type="button" value="Enter" id="col" class="enter" onclick="txt.value=eval(txt.value)">  
+
+        </div>
+
+    </form>
+</div>
+    </div>
+</body>
+</html>
